@@ -50,7 +50,7 @@ const Page1 = ({ navigation }) => (
         
     <View style={{flex: 15,alignItems:'center',justifyContent:'center'}}>
     
-    <TouchableHighlight style={styles.botao}onPress={()=>navigation.navigate('About')}>
+    <TouchableHighlight style={styles.botao}onPress={()=>navigation.navigate('Agricultura')}>
     
     <ImageBackground source={require('./Img/agronomy.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
     
@@ -63,7 +63,7 @@ const Page1 = ({ navigation }) => (
 
     </TouchableHighlight>
     
-    <TouchableHighlight style={styles.botao1}onPress={()=>console.log('ok')}>
+    <TouchableHighlight style={styles.botao1}onPress={()=>navigation.navigate('Alimentos')}>
     
     <ImageBackground source={require('./Img/food.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
 
