@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TouchableHighlight} from 'react-native';
+import {Platform, StyleSheet, Text, View, TouchableHighlight, ImageBackground} from 'react-native';
 import {Left, Right} from 'native-base';
 
 export default class App extends Component{
@@ -37,22 +37,26 @@ export default class App extends Component{
         
         <View style={{flex: 15,alignItems:'center',justifyContent:'center'}}>
         
-        <TouchableHighlight style={styles.botao}onPress={()=>console.log('oi')}onPress={()=>this.teste()}>
+        <TouchableHighlight style={styles.botao}onPress={()=>console.log('ok')}onPress={()=>this.teste()}>
         
-        <Text style={{alignItems:'center',justifyContent:'center',color:'white',fontSize:25}}>AGRICULTURA
-
+        <ImageBackground source={require('./Img/agronomy.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
+        
+        <Text style={{position:'relative',marginTop:340,marginLeft:20,color:'white',fontSize:20}}>AGRICULTURA
 
         </Text>
+
+        </ImageBackground>
 
 
         </TouchableHighlight>
         
         <TouchableHighlight style={styles.botao1}onPress={()=>console.log('ok')}onPress={()=>this.teste()}>
         
-        <Text style={{position:'relative',color:'white',fontSize:25}}>ALIMENTACAO
+        <ImageBackground source={require('./Img/food.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
 
+        <Text style={{position:'relative',marginTop:340,marginLeft:40,color:'white',fontSize:20}}>ALIMENTOS</Text>
 
-        </Text>
+        </ImageBackground>
 
 
         </TouchableHighlight>
