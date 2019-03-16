@@ -12,28 +12,34 @@ import {Left, Right} from 'native-base';
 
 export default class App extends Component{
 
-  sortear(){
+  saida(){
 
-    var numero = Math.random(0,10)
-    numero *= 10
-    numero = parseInt(numero)
-    alert(numero)
+    alert("SAINDO")
 
   }
 
+  sobre(){
+
+    alert("HACKATHON FACEBOOK 2019")
+  }
+
+  teste(){
+
+    alert("TESTE!")
+  }
+
+//
   render() {
     return (
       <View style={{flex:16,backgroundColor:"#31bc84"}}>
 
 
         
-        <View style={{marginRight:500,flex: 15,alignItems:'flex-start',justifyContent:'center'}}>
+        <View style={{flex: 15,alignItems:'center',justifyContent:'center'}}>
         
-        <TouchableHighlight style={{backgroundColor:'pink',alignItems:'center',justifyContent:'center',width:100,height
+        <TouchableHighlight style={styles.botao}onPress={()=>console.log('oi')}onPress={()=>this.teste()}>
         
-        :500,position:'absolute',top:300,left:150,borderRadius:15}}onPress={()=>console.log('oi')}>
-        
-        <Text style={{color:'white',fontSize:25}}>Ok
+        <Text style={{alignItems:'center',justifyContent:'center',color:'white',fontSize:25}}>AGRICULTURA
 
 
         </Text>
@@ -41,11 +47,9 @@ export default class App extends Component{
 
         </TouchableHighlight>
         
-        <TouchableHighlight style={{backgroundColor:'pink',alignItems:'center',justifyContent:'center',width:100,height
+        <TouchableHighlight style={styles.botao1}onPress={()=>console.log('ok')}onPress={()=>this.teste()}>
         
-        :100,position:'absolute',top:300,left:300,borderRadius:15}}onPress={()=>console.log('oi')}>
-        
-        <Text style={{color:'white',fontSize:25}}>Ok
+        <Text style={{position:'relative',color:'white',fontSize:25}}>ALIMENTACAO
 
 
         </Text>
@@ -58,18 +62,18 @@ export default class App extends Component{
         </View>
 
 
-        <View style={{flex:1,backgroundColor:'blue',flexDirection:'row'}}>
+        <View style={{flex:1,flexDirection:'row'}}>
 
     
           <Left>
             
-          <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}}>Sobre</Text>
+          <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}}onPress={()=>this.sobre()}>Sobre</Text>
 
           </Left>
       
           <Right>
 
-          <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}}>Sair</Text>
+          <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}}onPress={()=>this.saida()}>Sair</Text>
 
           </Right>
 
@@ -100,4 +104,26 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  botao1:{
+    backgroundColor:'pink',
+    alignItems:'center',
+    justifyContent:'center',
+    width:190,
+    height:710,
+    position:'absolute',
+    top:10,
+    left:210,
+    borderRadius:15
+  },
+  botao:{
+    backgroundColor:'pink',
+    alignItems:'center',
+    justifyContent:'center',
+    width:190,
+    height:710,
+    position:'absolute',
+    top:10,
+    left:10,
+    borderRadius:15
+  }
 });
