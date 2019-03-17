@@ -20,8 +20,10 @@ function sair(){ Alert.alert(
 function sobre(){
 alert("HACKATHON FACEBOOK 2019, Criado por Erick, Flavio, Gabriel, Gustavo, Luciano e Verônica.");
 }
+
 const Page7 = ({ navigation }) => (
-  <View style={{flex:16,backgroundColor:"#000000"}}>
+  <View style={{fbackgroundColor:"#000000"}}>
+  <View style={{flex:16, height:'70%'}}>
     <TouchableHighlight style={styles.botao_cenora}onPress={()=>navigation.navigate('Ajuda')}>
       <Text style={{fontSize:20,color:'white',alignItems:'center',width:'50%',position:'relative', fontWeight:'bold'}}>Cenoura</Text>
     </TouchableHighlight>
@@ -31,16 +33,17 @@ const Page7 = ({ navigation }) => (
     <TouchableHighlight style={styles.botao_milho}onPress={()=>navigation.navigate('Ajuda')}>
       <Text style={{fontSize:20,color:'white',alignItems:'center',width:'50%',position:'relative', fontWeight:'bold'}}>Milho</Text>
     </TouchableHighlight>
-  </View>
-,
-  <View style={{flex:1,flexDirection:'row'}}>
-  <Left>        
-  <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}} onPress={()=>sobre()}>Sobre</Text>
-  </Left>
-    <Right>
-  <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}} onPress={()=>sair()}>Sair</Text>
-  </Right>
- </View>
+    </View> 
+     <View style={{flex:1,flexDirection:'row'}}>
+      <Left>        
+      <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}} onPress={()=>sobre()}>Sobre</Text>
+      </Left>
+        <Right>
+      <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}} onPress={()=>sair()}>Sair</Text>
+      </Right>
+    </View>
+    </View>
+
 );
 
 

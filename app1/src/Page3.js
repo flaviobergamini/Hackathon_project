@@ -40,6 +40,11 @@ const Page3 = ({ navigation })=> (
               <Text style={{color:'white',fontSize:20, fontWeight:'bold'}}>SEI PLANTAR E QUERO AJUDAR!</Text>
             </ImageBackground>
           </TouchableHighlight>
+          <TouchableHighlight style={styles.botao1}onPress={()=>console.log('ok')}onPress={()=>navigation.navigate('Agrotoxico')}>
+            <ImageBackground source={require('./Img/veneno.jpg')} style={{width: '100%', height: '100%',borderRadius:15,justifyContent: 'center', alignItems: 'center'}}>
+              <Text style={{color:'white',fontSize:20, fontWeight:'bold'}}>INFORMACAO SOBRE AGROTOXICOS.</Text>
+            </ImageBackground>
+          </TouchableHighlight>
         </View>
 
         <View style={{flex:1,flexDirection:'row'}}>

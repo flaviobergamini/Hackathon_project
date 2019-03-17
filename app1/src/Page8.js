@@ -41,15 +41,6 @@ const Page8 = ({ navigation }) => (
         <Text style={{fontSize:20,color:'white', fontWeight:'bold', left:3, top:6}}>Enviar</Text>
       </TouchableHighlight>
   </View>
-,
- <View style={{flex:1,flexDirection:'row'}}>
- <Left>        
- <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}} onPress={()=>sobre()}>Sobre</Text>
- </Left>
-   <Right>
- <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}} onPress={()=>sair()}>Sair</Text>
- </Right>
-</View>
 
 );
 
