@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
       borderRadius:15,
       width: 100, 
       height: 50,
-      top:60,
+      top:80,
       alignItems:'center'
   }
 });
@@ -52,7 +52,7 @@ function sair(){ Alert.alert(
 }
 
 function sobre(){
-alert("HACKATHON FACEBOOK 2019, Criado por Erick, Flavio, Gabriel, Gustavo, Luciano e Ver√¥nica.");
+alert("HACKATHON FACEBOOK 2019, Criado por Erick, Flavio, Gabriel, Gustavo, Luciano e VerÙnica.");
 }
 export default class Page4 extends Component {
 
@@ -65,7 +65,7 @@ export default class Page4 extends Component {
     return (
       <View style={{flex:16,backgroundColor:"#31bc84"}}>
 
-      <View style={{ position: 'absolute', top: 10, }}>
+      <View style={{  position: 'absolute', top:10}}>
         <Vertical onChange={this.handleButtonChange}></Vertical>
         {buttonvalue == 0 ? (
 
@@ -76,7 +76,7 @@ export default class Page4 extends Component {
             onChangeText={(newCaracter)=>console.log('')}
             value_name = {test}>
           </TextInput>
-          <Text style = {{color:'white', fontSize:20, fontWeight:'bold', top:40, alignItems: 'center'}}>Comida que est√° precisando:</Text>
+          <Text style = {{color:'white', fontSize:20, fontWeight:'bold', top:40, alignItems: 'center'}}>Comida que est· precisando:</Text>
           <TextInput 
           style = {{backgroundColor:'white', fontSize:20, top:50}}
           onChangeText={(newCaracter)=>console.log('')}
@@ -120,10 +120,10 @@ export default class Page4 extends Component {
 
       <View style={{flex:1,flexDirection:'row'}}>
       <Left>        
-      <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}} onPress={()=>sobre()}>Sobre</Text>
+      <Text style={{marginLeft:10,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative', top:350}} onPress={()=>sobre()}>Sobre</Text>
       </Left>
         <Right>
-      <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}} onPress={()=>sair()}>Sair</Text>
+      <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative', top:350}} onPress={()=>sair()}>Sair</Text>
       </Right>
     </View>
  

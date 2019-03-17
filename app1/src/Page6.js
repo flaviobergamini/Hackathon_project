@@ -51,7 +51,7 @@ function sair(){ Alert.alert(
 }
 
 function sobre(){
-alert("HACKATHON FACEBOOK 2019, Criado por Erick, Flavio, Gabriel, Gustavo, Luciano e Ver√¥nica.");
+alert("HACKATHON FACEBOOK 2019, Criado por Erick, Flavio, Gabriel, Gustavo, Luciano e VerÙnica.");
 }
 
 export default class Page6 extends Component {
@@ -83,7 +83,7 @@ export default class Page6 extends Component {
           onChangeText={(newCaracter)=>console.log('')}
           value_name = {test}>
           </TextInput>
-          <Text style = {{color:'white', fontSize:20, fontWeight:'bold', top:40, alignItems: 'center'}}>Hor√°rio de recebimento:</Text>
+          <Text style = {{color:'white', fontSize:20, fontWeight:'bold', top:40, alignItems: 'center'}}>Hor·rio de recebimento:</Text>
           <TextInput 
           style = {{backgroundColor:'white', fontSize:20, top:50}}
           onChangeText={(newCaracter)=>console.log('')}
@@ -100,10 +100,10 @@ export default class Page6 extends Component {
       </View>
       <View style={{flex:1,flexDirection:'row'}}>
       <Left>        
-      <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}} onPress={()=>sobre()}>Sobre</Text>
+      <Text style={{marginLeft:10,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative', top:350}} onPress={()=>sobre()}>Sobre</Text>
       </Left>
         <Right>
-      <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}} onPress={()=>sair()}>Sair</Text>
+      <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative', top:350}} onPress={()=>sair()}>Sair</Text>
       </Right>
     </View>
    </View>
