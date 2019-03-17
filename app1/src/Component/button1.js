@@ -8,13 +8,13 @@ export default class Vertical extends Component {
     data: [
       {
         label: 'Necessito de comida para mim e minha família.',
-        color: 'green',
         value: "2",
+        size : 30,
       },
       {
         label: 'Uma instituição necessita de comida.',
         value: "1",
-        color: 'green',
+        size : 30,
       },
       ],
   };

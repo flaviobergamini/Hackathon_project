@@ -1,6 +1,25 @@
 import React from 'react';
-import { View, Button, Text, StyleSheet,TouchableHighlight, ImageBackground, Platform } from 'react-native';
+import {Alert,BackHandler, View, Button, Text, StyleSheet,TouchableHighlight, ImageBackground, Platform } from 'react-native';
 import {Left,Right} from 'native-base';
+
+function sair(){ Alert.alert(
+  'Sair',
+  'Voce deseja sair do app ?',
+  [
+    {text: 'SAIR', onPress: () =>BackHandler.exitApp()},
+    {
+      text: 'CANCELAR',
+      onPress: () => console.log('Cancel Pressed'),
+      style: 'cancel',
+    },
+    ],
+  {cancelable: false},
+); 
+}
+
+function sobre(){
+alert("HACKATHON FACEBOOK 2019, Criado por Erick, Flavio, Gabriel, Gustavo, Luciano e Verônica.");
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -21,107 +40,59 @@ const styles = StyleSheet.create({
     },
     botao2:{
       backgroundColor:'pink',
-      alignItems:'center',
-      justifyContent:'center',
-      width:390,
-      height:220,
-      position:'absolute',
-      top:500,
-      left:10,
-      borderRadius:15
+      flex: 1,
+        borderRadius:15,
+        width: 480, 
+        height: 50,
+        marginBottom:5
     },
     botao1:{
       backgroundColor:'pink',
-      alignItems:'center',
-      justifyContent:'center',
-      width:390,
-      height:220,
-      position:'absolute',
-      top:260,
-      left:10,
-      borderRadius:15
+      flex: 1,
+        borderRadius:15,
+        width: 480, 
+        height: 50,
+        marginBottom:5
     },
     botao:{
       backgroundColor:'pink',
-      alignItems:'center',
-      justifyContent:'center',
-      width:390,
-      height:220,
-      position:'absolute',
-      top:20,
-      left:10,
-      borderRadius:15
+      flex: 1,
+        borderRadius:15,
+        width: 480, 
+        height: 50,
+        marginBottom:5
     }
   });
 
 const Page2 = ({ navigation })=> (
-    <View style={{flex:16,backgroundColor:"#31bc84"}}>
+    <View style={{flex:1,backgroundColor:"#000000"}}>    
+      <View style={{flex: 15,alignItems:'center',justifyContent:'center', flexDirection:'column'}}>
+        <TouchableHighlight style={styles.botao}onPress={()=>console.log('ok')}onPress={()=>navigation.navigate('Necessita')}>
+          <ImageBackground source={require('./Img/without.jpg')} style={{width: '100%', height: '100%',borderRadius:15,justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={{color:'black',fontSize:20, fontWeight:'bold'}}>Preciso de alimento!</Text>
+          </ImageBackground>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.botao1}onPress={()=>console.log('ok')}onPress={()=>navigation.navigate('Doar_adotar')}>
+          <ImageBackground source={require('./Img/with.jpg')} style={{width: '100%', height: '100%',borderRadius:15,justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={{color:'black',fontSize:20, fontWeight:'bold'}}>Tenho alimento!</Text>
+          </ImageBackground>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.botao2}onPress={()=>console.log('ok')}onPress={()=>navigation.navigate('Local')}>
+          <ImageBackground source={require('./Img/local.jpg')} style={{width: '100%', height: '100%',borderRadius:15,justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={{color:'black',fontSize:20, fontWeight:'bold'}}>Instituições/pontos de distribuição</Text>
+          </ImageBackground>
+        </TouchableHighlight>
+      </View>
 
-
-        
-    <View style={{flex: 15,alignItems:'center',justifyContent:'center'}}>
-    
-    <TouchableHighlight style={styles.botao}onPress={()=>console.log('ok')}onPress={()=>navigation.navigate('Necessita')}>
-    
-    <ImageBackground source={require('./Img/without.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
-    
-    <Text style={{position:'relative',marginTop:100,marginLeft:100,color:'black',fontSize:20}}>Preciso de alimento!
-
-    </Text>
-
-    </ImageBackground>
-
-
-    </TouchableHighlight>
-    
-    <TouchableHighlight style={styles.botao1}onPress={()=>console.log('ok')}onPress={()=>navigation.navigate('Doar_adotar')}>
-    
-    <ImageBackground source={require('./Img/with.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
-
-    <Text style={{position:'relative',marginTop:100,marginLeft:120,color:'black',fontSize:20}}>Tenho alimento!</Text>
-
-    </ImageBackground>
-
-
-    </TouchableHighlight>
-
-    <TouchableHighlight style={styles.botao2}onPress={()=>console.log('ok')}onPress={()=>navigation.navigate('Local')}>
-    
-    <ImageBackground source={require('./Img/local.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
-
-    <Text style={{position:'relative',marginTop:100,marginLeft:20,color:'black',fontSize:20}}>Instituições/pontos de distribuição</Text>
-
-    </ImageBackground>
-
-
-    </TouchableHighlight>
-
-
-
-    </View>
-
-
-    <View style={{flex:1,flexDirection:'row'}}>
-
-
-      <Left>
-        
-      <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}}onPress={()=>this.sobre()}>Sobre</Text>
-
+      <View style={{flex:1,flexDirection:'row'}}>
+      <Left>        
+      <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}} onPress={()=>sobre()}>Sobre</Text>
       </Left>
-  
-      <Right>
-
-      <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}}onPress={()=>this.saida()}>Sair</Text>
-
+        <Right>
+      <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}} onPress={()=>sair()}>Sair</Text>
       </Right>
-
-  
     </View>
-  
-
-
-  </View>
+   </View>
 );
 
 export default Page2;

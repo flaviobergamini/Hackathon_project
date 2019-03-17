@@ -8,14 +8,14 @@ export default class Vertical extends Component {
     data: [
       {
         label: 'Ver locais de distribuicao.',
-        color: 'green',
         value: "2",
+        size : 30,
       },
       {
         label: 'Cadastrar local de distribuicao.',
         value: "1",
-        color: 'green',
-      },
+        size : 30,
+       },
       ],
   };
 

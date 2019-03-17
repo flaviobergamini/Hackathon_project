@@ -8,14 +8,14 @@ export default class Vertical extends Component {
     data: [
       {
         label: 'Quero doar ou trocar.',
-        color: 'green',
         value: "2",
+        size : 30,
       },
       {
-        label: 'Crowd n sei oq',
+        label: 'CrowdFood',
         value: "1",
-        color: 'green',
-      },
+        size : 30,
+        },
       ],
   };
 
