@@ -21,84 +21,41 @@ const styles = StyleSheet.create({
     },
     botao1:{
       backgroundColor:'pink',
-      alignItems:'center',
-      justifyContent:'center',
-      width:190,
-      height:710,
-      position:'absolute',
-      top:10,
-      left:210,
-      borderRadius:15
+      flex: 1,
+      borderRadius:15,
+      marginLeft: 5
     },
     botao:{
       backgroundColor:'pink',
-      alignItems:'center',
-      justifyContent:'center',
-      width:190,
-      height:710,
-      position:'absolute',
-      top:10,
-      left:10,
-      borderRadius:15
+      flex: 1,
+      borderRadius:15,
+      marginRight: 5
     }
   });
 
 const Page1 = ({ navigation }) => (
-    <View style={{flex:16,backgroundColor:"#31bc84"}}>
-
-
-        
-    <View style={{flex: 15,alignItems:'center',justifyContent:'center'}}>
-    
-    <TouchableHighlight style={styles.botao}onPress={()=>navigation.navigate('Agricultura')}>
-    
-    <ImageBackground source={require('./Img/agronomy.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
-    
-    <Text style={{position:'relative',marginTop:340,marginLeft:20,color:'white',fontSize:20}}>AGRICULTURA
-
-    </Text>
-
-    </ImageBackground>
-
-
-    </TouchableHighlight>
-    
-    <TouchableHighlight style={styles.botao1}onPress={()=>navigation.navigate('Alimentos')}>
-    
-    <ImageBackground source={require('./Img/food.jpg')} style={{width: '100%', height: '100%',borderRadius:15}}>
-
-    <Text style={{position:'relative',marginTop:340,marginLeft:40,color:'white',fontSize:20}}>ALIMENTOS</Text>
-
-    </ImageBackground>
-
-
-    </TouchableHighlight>
-
-
-
+  <View style={{flex:1,backgroundColor:"#000000"}}> 
+    <View style={{flex: 12, alignItems:'center',justifyContent:'center', flexDirection:'row'}}>
+      <TouchableHighlight style={styles.botao}onPress={()=>navigation.navigate('Agricultura')}>
+        <ImageBackground source={require('./Img/agronomy.jpg')} style={{width: '100%', height: '100%',borderRadius:15, justifyContent: 'center', alignItems: 'center'}}>
+          <Text style={{color:'white',fontSize:20, fontWeight:'bold'}}>AGRICULTURA</Text>
+        </ImageBackground>
+      </TouchableHighlight>
+      <TouchableHighlight style={styles.botao1}onPress={()=>navigation.navigate('Alimentos')}>
+        <ImageBackground source={require('./Img/food.jpg')} style={{width: '100%', height: '100%',borderRadius:15, justifyContent: 'center', alignItems: 'center'}}>
+          <Text style={{color:'white',fontSize:20, fontWeight:'bold'}}>ALIMENTOS</Text>
+        </ImageBackground>
+      </TouchableHighlight>
     </View>
-
 
     <View style={{flex:1,flexDirection:'row'}}>
-
-
-      <Left>
-        
-      <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}}>Sobre</Text>
-
+      <Left> 
+        <Text style={{marginLeft:60,fontSize:20,color:'white',alignItems:'flex-start',width:'50%',position:'relative'}}>Sobre</Text>
       </Left>
-  
       <Right>
-
-      <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}}>Sair</Text>
-
+        <Text style={{fontSize:20,color:'white',alignItems:'flex-end',width:'50%',position:'relative'}}>Sair</Text>
       </Right>
-
-  
     </View>
-  
-
-
   </View>
 );
   
